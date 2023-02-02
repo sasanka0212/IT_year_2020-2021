@@ -12,7 +12,7 @@ public class update
 			Statement statement=connection.createStatement();	//statement
 			int i = 5;
 			while(i-->0) {
-				String query = "insert into student10 alues(:sid,:sname,:roll,:stream)";
+				String query = "insert into student10 values(:sid,:sname,:roll,:stream)";
 				int r = statement.executeUpdate(query);
 				System.out.print(r + "'s rows inserted");
 			}
