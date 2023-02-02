@@ -1,1 +1,66 @@
+//html code(index1.html)
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>File Upload</title>
+</head>
+<body>
+
+	<form action="words.jsp" method="post">
+		<h2>Enter a number : <input type="text" name="num"></h2>
+		<input type="submit" value="Display">
+	</form>
+
+</body>
+</html>
+
+
+// Jsp code(words.jsp)
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Number to Words</title>
+</head>
+<body>
+
+	<%
+		String s = request.getParameter("num");
+		int l = s.length();
+		int i = 0;
+		while(i<l){
+			char ch = s.charAt(i);
+			switch(ch){
+				case '1':
+					out.print("One"); break;
+				case '2':
+					out.print("Two"); break;
+				case '3':
+					out.print("Three"); break;
+				case '4':
+					out.print("Four"); break;
+				case '5':
+					out.print("Five"); break;
+				case '6':
+					out.print("Six"); break;
+				case '7':
+					out.print("Seven"); break;
+				case '8':
+					out.print("Eight"); break;
+				case '9':
+					out.print("Nine"); break;
+				default:
+					out.print("Zero");
+			}
+			out.print(" ");
+			i++;
+		}
+	%>
+
+</body>
+</html>
