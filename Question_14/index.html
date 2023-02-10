@@ -1,0 +1,46 @@
+// REGISTRATION HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentInfo.com</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Registration Form</h1>
+    <form name="RegForm" onsubmit="return Check()" method="post">
+    <p>Your Name : <input type="text" size="80" name="Name"></p><br>
+    <p>DOB : <input type="date" id="date" name="birth"></p>
+    <p>Registration No : <input type="number" size="80" name="Reg"></p><br>
+    <p>Roll : <input type="number" size="80" name="Roll"> Number : <input type="number" size="80" name="Number"></p><br>
+    <p>Email-Address : <input type="text" size="80" name="Email"></p><br>
+    <p>Phone No : <input type="number" size="80" name="Phone"></p><br>
+    <p>
+        Select Your Honours Course :
+        <select type="text" value="" name="Course">
+            <option>Computer Science</option>
+            <option>Mathematics</option>
+            <option>Statistics</option>
+            <option>Physics</option>
+            <option>Chemistry</option>
+            <option>Biotechnology</option>
+            <option>Geography</option>
+            <option>Sociology</option>
+            <option>Microbiology</option>
+        </select>
+    </p><br>
+    <p>
+        Select Semester :
+        <select type="text" value="" name="Sem">
+            <option>5th Semester</option>
+            <option>3rd Semester</option>
+            <option>1st Semester</option>
+        </select>
+    </p><br>
+    <p><button id="press">Check</button></p>
+    <script src="validate.js"></script>
+    </form>
+</body>
+</html>
