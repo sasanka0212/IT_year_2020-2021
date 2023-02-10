@@ -1,0 +1,23 @@
+<head>
+  <title>Dimention</title>
+  <script>
+    function getDm() {
+      var img = document.getElementById('image')
+      img.onload = function () {
+        var height = img.height;
+        var width = img.width;
+        document.write('height : ', height);
+        document.write('width : ', width)
+      }
+      img.onload()
+    }
+  </script>
+</head>
+
+<body onload="getDm()">
+
+  <img id="image" src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg"
+    style="position:absolute; height:100px; width:100px;">
+</body>
+
+</html>
