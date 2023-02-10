@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <script>
+    function changeColor() {
+      var text = document.getElementById("text")
+      var colors = ['red', 'green', 'blue', 'yellow']
+      var colIndex = 0
+      setInterval(function () {
+        text.style.color = colors[colIndex++ % colors.length]
+      }, 1000)
+    }
+    function moveImage() {
+      var image = document.getElementById("image")
+      var x = 0
+      var dir = 1
+      setInterval(function () {
+        x += dir
+        if (x >= window.innerWidth - image.width || x <= 0) {
+          dir *= -1
+        }
+        image.style.left = x + "px"
+      }, 10)
+    }
+  </script>
+</head>
+
+<body onload="changeColor(); moveImage();">
+  <p id="text">Hello World</p>
+  <img id="image" src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg"
+    style="position:absolute; height:100px; width:100px;">
+</body>
+
+</html>
